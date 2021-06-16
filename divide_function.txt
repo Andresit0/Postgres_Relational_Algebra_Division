@@ -10,9 +10,7 @@ declare
 	rec record;
 	varDivide varchar := '';
 begin
-	if (SELECT count(table_name) FROM information_schema.columns WHERE table_name='div') > 0 then
-		execute 'drop table DIV;';
-	end if;
+	drop table if exists div;
 	execute
 	'create temp table A as(	
 	select * from
