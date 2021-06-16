@@ -10,7 +10,7 @@ declare
 	rec record;
 	varDivide varchar := '';
 begin
-	drop table if exists div;
+	drop table if exists div ;
 	execute
 	'create temp table A as(	
 	select * from
